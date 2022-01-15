@@ -14,6 +14,7 @@
 		181FD970278F13D90029B49B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181FD96F278F13D90029B49B /* Assets.xcassets */; };
 		181FD973278F13D90029B49B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181FD971278F13D90029B49B /* LaunchScreen.storyboard */; };
 		181FD97B278F2AD80029B49B /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FD97A278F2AD80029B49B /* SpringAnimation.swift */; };
+		18264F4F27919635001A043E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18264F4E27919635001A043E /* DataManager.swift */; };
 		7B375D863AEB119A73737D88 /* Pods_AnimationSpringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC58560BAA3BA41C52725BF2 /* Pods_AnimationSpringApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		181FD972278F13D90029B49B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181FD974278F13D90029B49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181FD97A278F2AD80029B49B /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		18264F4E27919635001A043E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		75DC56DCB8A49F632E1CB36C /* Pods-AnimationSpringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationSpringApp.debug.xcconfig"; path = "Target Support Files/Pods-AnimationSpringApp/Pods-AnimationSpringApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AC58560BAA3BA41C52725BF2 /* Pods_AnimationSpringApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationSpringApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				181FD971278F13D90029B49B /* LaunchScreen.storyboard */,
 				181FD974278F13D90029B49B /* Info.plist */,
 				181FD97A278F2AD80029B49B /* SpringAnimation.swift */,
+				18264F4E27919635001A043E /* DataManager.swift */,
 			);
 			path = AnimationSpringApp;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181FD96B278F13D50029B49B /* ViewController.swift in Sources */,
+				18264F4F27919635001A043E /* DataManager.swift in Sources */,
 				181FD967278F13D50029B49B /* AppDelegate.swift in Sources */,
 				181FD969278F13D50029B49B /* SceneDelegate.swift in Sources */,
 				181FD97B278F2AD80029B49B /* SpringAnimation.swift in Sources */,

@@ -9,20 +9,16 @@ import Spring
 
 class ViewController: UIViewController {
     @IBOutlet var spingAnimationView: SpringView!
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    
+    private var animation = ViewAnimation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        descriptionLabel.text = animation.description
     }
 
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
-        let animation = ViewAnimation.getAnimation()
-       // let animationNext = ViewAnimation.getAnimation()
         
         spingAnimationView.animation = animation.preset
         spingAnimationView.curve = animation.curve
@@ -31,11 +27,9 @@ class ViewController: UIViewController {
         spingAnimationView.delay = animation.delay
         spingAnimationView.animate()
         
-        presetLabel.text = "Preset: \(animation.preset)"
-        curveLabel.text = "Curve: \(animation.curve)"
-        forceLabel.text = "Force: \(String(format: "%.2f", animation.force))"
-        durationLabel.text = "Duration: \(String(format: "%.2f",animation.duration))"
-        delayLabel.text = "Delay: \(String(format: "%.2f", animation.delay))"
+        descriptionLabel.text = animation.description
+        
+        animation = ViewAnimation.getAnimation()
         
         sender.setTitle(animation.preset, for: .normal)
     }

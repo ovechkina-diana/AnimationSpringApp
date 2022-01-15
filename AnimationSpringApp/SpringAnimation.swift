@@ -7,28 +7,32 @@
 
 import Spring
 
-let animationsPreset = Spring.AnimationPreset.allCases
-let animationsCurve = Spring.AnimationCurve.allCases
-
 struct ViewAnimation {
-    var preset: String
-    var curve: String
-    var force: CGFloat
-    var duration: CGFloat
-    var delay: CGFloat
+    let preset: String
+    let curve: String
+    let force: CGFloat
+    let duration: CGFloat
+    let delay: CGFloat
+    
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.02f", force))
+        duration: \(String(format: "%.02f", duration))
+        delay: \(String(format: "%.02f", delay))
+        """
+    }
     
     static func getAnimation() -> ViewAnimation {
-        
-        let animationsPreset = Spring.AnimationPreset.allCases
-        let animationsCurve = Spring.AnimationCurve.allCases
-        
-        return ViewAnimation(preset: animationsPreset.randomElement()!.rawValue,
-                             curve: animationsCurve.randomElement()!.rawValue,
+
+        return ViewAnimation(preset: DataManager.shared.animationsPreset.randomElement()?.rawValue ?? "shake",
+                             curve:
+            DataManager.shared.animationsCurve.randomElement()?.rawValue ?? "easeIn",
                              force: CGFloat.random(in: 0...1),
                              duration: CGFloat.random(in: 0...1),
                              delay: CGFloat.random(in: 0...1))
-   
-    }
+        }
 }
 
 
